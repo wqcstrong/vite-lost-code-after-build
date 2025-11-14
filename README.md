@@ -13,7 +13,7 @@ When building a project with the default Vite bundler, some source code appears 
 
 ### Repository Structure
 
-This repository contains two identical projects that differ only in their bundler configuration:
+This repository contains two identical projects that differ only in their `package.json`:
 
 - **`using-default-vite/`** - Uses the default Vite bundler
 - **`using-rolldown-vite/`** - Uses Rolldown-based Vite
