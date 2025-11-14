@@ -4,7 +4,7 @@
 
 ### Problem Description
 
-When building a project with the default Vite bundler, some source code appears to be missing or incorrectly processed in the production build. However, when using `rolldown-vite` as an alternative bundler, the build works correctly and all source code is preserved.
+When creating a project with `yarn create vite` using the default Vite bundler, source code is lost in the build output. However, when using `rolldown-vite` as an alternative bundler, everything works correctly.
 
 |                              | Default Vite | Rolldown Vite |
 | ---------------------------- | ------------ | ------------- |
@@ -13,7 +13,7 @@ When building a project with the default Vite bundler, some source code appears 
 
 ### Repository Structure
 
-This repository contains two identical projects that differ only in their `package.json`:
+This repository contains two projects with completely identical source code, except for their `package.json`:
 
 - **`using-default-vite/`** - Uses the default Vite bundler
 - **`using-rolldown-vite/`** - Uses Rolldown-based Vite
@@ -30,9 +30,7 @@ This repository contains two identical projects that differ only in their `packa
    yarn build && yarn preview
    ```
 
-   This build result in missing source code in the output.
-
-3. Build with rolldown-vite:
+3. Build with rolldown-vite and preview:
 
    ```bash
    cd using-rolldown-vite
@@ -40,10 +38,8 @@ This repository contains two identical projects that differ only in their `packa
    yarn build && yarn preview
    ```
 
-   This build should work correctly with all source code preserved.
-
 4. Compare the build outputs:
 
-   - Check the generated files in devtool source panel and search `createUniforms` keyword
+   - Check the generated files in the browser's Source panel and search for the `createUniforms` keyword
 
    ![](./diff-built.jpeg)
